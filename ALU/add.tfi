@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+add instance_name (
+    .in1(in1), 
+    .in2(in2), 
+    .out(out)
+    );
+
+

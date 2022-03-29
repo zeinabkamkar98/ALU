@@ -1,0 +1,7 @@
+verilog work "XOR.v"
+verilog work "sub.v"
+verilog work "mul.v"
+verilog work "IEEE.v"
+verilog work "find_max.v"
+verilog work "count_ones.v"
+verilog work "ALU.v"

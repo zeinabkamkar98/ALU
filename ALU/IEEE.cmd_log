@@ -1,0 +1,6 @@
+vhdtdtfi -lang verilog -prj VLU1 -o E:/verilog/VLU1/IEEE.tfi -lib work E:/verilog/VLU1//IEEE.v -module IEEE -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/verilog/VLU1/IEEE.v -lang verilog -prj VLU1 -o IEEE.spl -module IEEE -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e IEEE.spl E:/verilog/VLU1/IEEE.sym 
+vhdtdtfi -lib work E:/verilog/VLU1/IEEE.v -lang verilog -prj VLU1 -o IEEE.spl -module IEEE -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e IEEE.spl E:/verilog/VLU1/IEEE.sym 
+vhdtdtfi -lang verilog -prj VLU1 -o E:/verilog/VLU1/IEEE.tfi -lib work E:/verilog/VLU1//IEEE.v -module IEEE -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

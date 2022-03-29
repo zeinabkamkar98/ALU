@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/verilog/VLU1/ALU_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="ALU_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/ALU_test/out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_test/equality" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">equality</obj_property>
+      <obj_property name="ObjectShortName">equality</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_test/balance" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">balance</obj_property>
+      <obj_property name="ObjectShortName">balance</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_test/mod" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mod</obj_property>
+      <obj_property name="ObjectShortName">mod</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_test/in1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">in1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">in1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_test/in2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">in2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">in2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_test/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_test/control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control[5:0]</obj_property>
+      <obj_property name="ObjectShortName">control[5:0]</obj_property>
+   </wvobject>
+</wave_config>

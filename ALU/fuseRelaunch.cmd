@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/verilog/VLU1/IEEE_to_binarytest_isim_beh.exe" -prj "E:/verilog/VLU1/IEEE_to_binarytest_beh.prj" "work.IEEE_to_binarytest" "work.glbl" 

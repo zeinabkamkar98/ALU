@@ -1,0 +1,595 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALU"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-ft256
+
+---- Source Options
+Top Module Name                    : ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "XOR.v" in library work
+Compiling verilog file "sub.v" in library work
+Module <XOR> compiled
+Compiling verilog file "mul.v" in library work
+Module <sub> compiled
+Compiling verilog file "IEEE.v" in library work
+Module <mul> compiled
+Compiling verilog file "find_max.v" in library work
+Module <IEEE> compiled
+Compiling verilog file "count_ones.v" in library work
+Module <find_max> compiled
+Compiling verilog file "ALU.v" in library work
+Module <count_ones> compiled
+Module <ALU> compiled
+No errors in compilation
+Analysis of file <"ALU.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <ALU> in library <work>.
+
+Analyzing hierarchy for module <IEEE> in library <work>.
+
+Analyzing hierarchy for module <XOR> in library <work>.
+
+Analyzing hierarchy for module <add> in library <work>.
+
+Analyzing hierarchy for module <count_ones> in library <work>.
+
+Analyzing hierarchy for module <find_max> in library <work>.
+
+Analyzing hierarchy for module <mul> in library <work>.
+
+Analyzing hierarchy for module <sub> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <ALU>.
+WARNING:Xst:2323 - "ALU.v" line 33: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU.v" line 33: Parameter 3 is not constant in call of system task $display.
+"ALU.v" line 33: $display : mood=%b ,reset=%b
+WARNING:Xst:2323 - "ALU.v" line 53: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU.v" line 53: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU.v" line 53: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU.v" line 53: Parameter 5 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU.v" line 53: Parameter 6 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU.v" line 53: Parameter 7 is not constant in call of system task $display.
+"ALU.v" line 53: $display : input1=%d ,input2=%d ,control=%b ,output(result)=%d ,equality=%b ,balance=%b
+
+WARNING:Xst:2323 - "ALU.v" line 58: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU.v" line 58: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "ALU.v" line 58: Parameter 4 is not constant in call of system task $display.
+"ALU.v" line 58: $display : input1(digit_part)=%d ,input2(float_part=)%d ,output(IEEE-754)=%b
+
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <IEEE> in library <work>.
+Module <IEEE> is correct for synthesis.
+ 
+Analyzing module <XOR> in library <work>.
+Module <XOR> is correct for synthesis.
+ 
+Analyzing module <add> in library <work>.
+Module <add> is correct for synthesis.
+ 
+Analyzing module <count_ones> in library <work>.
+Module <count_ones> is correct for synthesis.
+ 
+Analyzing module <find_max> in library <work>.
+Module <find_max> is correct for synthesis.
+ 
+Analyzing module <mul> in library <work>.
+Module <mul> is correct for synthesis.
+ 
+Analyzing module <sub> in library <work>.
+Module <sub> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <IEEE>.
+    Related source file is "IEEE.v".
+WARNING:Xst:647 - Input <in2<4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <temp2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <temp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <rep> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mantissa> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 5-bit comparator greatequal for signal <mantissa$cmp_ge0000> created at line 61.
+    Found 5-bit subtractor for signal <old_temp2_10$addsub0000> created at line 45.
+    Found 5-bit comparator greatequal for signal <old_temp2_10$cmp_ge0000> created at line 43.
+    Found 5-bit subtractor for signal <old_temp2_12$addsub0000> created at line 54.
+    Found 5-bit comparator greatequal for signal <old_temp2_12$cmp_ge0000> created at line 52.
+    Found 5-bit subtractor for signal <old_temp2_6$addsub0000> created at line 27.
+    Found 5-bit comparator greatequal for signal <old_temp2_6$cmp_ge0000> created at line 25.
+    Found 5-bit subtractor for signal <old_temp2_8$addsub0000> created at line 36.
+    Found 5-bit comparator greatequal for signal <old_temp2_8$cmp_ge0000> created at line 34.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+Unit <IEEE> synthesized.
+
+
+Synthesizing Unit <XOR>.
+    Related source file is "XOR.v".
+    Found 5-bit xor2 for signal <out$xor0000> created at line 27.
+Unit <XOR> synthesized.
+
+
+Synthesizing Unit <add>.
+    Related source file is "add.v".
+    Found 5-bit adder carry out for signal <out$addsub0000> created at line 9.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <add> synthesized.
+
+
+Synthesizing Unit <count_ones>.
+    Related source file is "count_ones.v".
+    Found 2-bit adder for signal <out$addsub0001> created at line 9.
+    Found 3-bit adder for signal <out$addsub0003> created at line 9.
+    Found 3-bit adder for signal <out$addsub0004> created at line 9.
+    Found 3-bit adder for signal <out$addsub0005> created at line 9.
+    Found 4-bit adder for signal <out$addsub0007> created at line 9.
+    Found 4-bit adder carry out for signal <out$addsub0008> created at line 9.
+    Found 1-bit adder carry out for signal <out$addsub0009> created at line 9.
+    Found 2-bit adder carry out for signal <out$addsub0010> created at line 9.
+    Found 3-bit adder carry out for signal <out$addsub0011> created at line 9.
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+Unit <count_ones> synthesized.
+
+
+Synthesizing Unit <find_max>.
+    Related source file is "find_max.v".
+    Found 5-bit comparator greater for signal <out$cmp_gt0000> created at line 9.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <find_max> synthesized.
+
+
+Synthesizing Unit <mul>.
+    Related source file is "mul.v".
+    Found 5x5-bit multiplier for signal <out$mult0000> created at line 9.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <mul> synthesized.
+
+
+Synthesizing Unit <sub>.
+    Related source file is "sub.v".
+    Found 5-bit comparator greater for signal <out$cmp_gt0000> created at line 9.
+    Found 7-bit subtractor for signal <out$sub0000> created at line 9.
+    Found 7-bit subtractor for signal <out$sub0001> created at line 9.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <sub> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "ALU.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <balance>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <equality>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit xor32 for signal <old_balance_4$xor0000>.
+    Found 5-bit comparator equal for signal <old_equality_3$cmp_eq0000> created at line 51.
+    Summary:
+	inferred   1 Comparator(s).
+	inferred   1 Xor(s).
+Unit <ALU> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 5x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 16
+ 1-bit adder carry out                                 : 1
+ 2-bit adder                                           : 1
+ 2-bit adder carry out                                 : 1
+ 3-bit adder                                           : 3
+ 3-bit adder carry out                                 : 1
+ 4-bit adder                                           : 1
+ 4-bit adder carry out                                 : 1
+ 5-bit adder carry out                                 : 1
+ 5-bit subtractor                                      : 4
+ 7-bit subtractor                                      : 2
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 8
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greatequal                           : 5
+ 5-bit comparator greater                              : 2
+# Xors                                                 : 2
+ 1-bit xor32                                           : 1
+ 5-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 5x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 16
+ 1-bit adder carry out                                 : 1
+ 2-bit adder                                           : 1
+ 2-bit adder carry out                                 : 1
+ 3-bit adder                                           : 3
+ 3-bit adder carry out                                 : 1
+ 4-bit adder                                           : 1
+ 4-bit adder carry out                                 : 1
+ 4-bit subtractor                                      : 4
+ 5-bit adder carry out                                 : 1
+ 7-bit subtractor                                      : 2
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 8
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greatequal                           : 5
+ 5-bit comparator greater                              : 2
+# Xors                                                 : 2
+ 1-bit xor32                                           : 1
+ 5-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<31>, out<31>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<30>, _old_out_2<30>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<29>, out<29>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<28>, out<28>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<27>, _old_out_2<27>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<26>, out<26>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<25>, _old_out_2<25>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<24>, out<24>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<23>, out<23>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<22>, out<22>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<21>, _old_out_2<21>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<20>, _old_out_2<20>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<19>, _old_out_2<19>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<18>, out<18>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<17>, out<17>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<16>, out<16>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<15>, out<15>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<14>, _old_out_2<14>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<13>, _old_out_2<13>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<12>, _old_out_2<12>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<11>, _old_out_2<11>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<10>, out<10>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<9>, out<9>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: out<8>, _old_out_2<8>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<7>, out<7>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<6>, out<6>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<5>, out<5>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<4>, out<4>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<3>, out<3>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<2>, out<2>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<1>, out<1>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: _old_out_2<0>, out<0>.
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <IEEE> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ALU.ngr
+Top Level Output File Name         : ALU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 52
+
+Cell Usage :
+# BELS                             : 264
+#      GND                         : 1
+#      LUT2                        : 46
+#      LUT3                        : 54
+#      LUT4                        : 108
+#      MUXCY                       : 17
+#      MUXF5                       : 18
+#      VCC                         : 1
+#      XORCY                       : 19
+# FlipFlops/Latches                : 2
+#      LDCP                        : 2
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 52
+#      IBUF                        : 18
+#      OBUF                        : 34
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250eft256-5 
+
+ Number of Slices:                      120  out of   2448     4%  
+ Number of 4 input LUTs:                208  out of   4896     4%  
+ Number of IOs:                          52
+ Number of bonded IOBs:                  52  out of    172    30%  
+    IOB Flip Flops:                       2
+ Number of MULT18X18SIOs:                 1  out of     12     8%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF+BUFG              | 2     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------+------------------------+-------+
+Control Signal                        | Buffer(FF name)        | Load  |
+--------------------------------------+------------------------+-------+
+balance__and0000(balance__and00001:O) | NONE(balance)          | 1     |
+balance__and0001(balance__and00011:O) | NONE(balance)          | 1     |
+equality__and0000(equality__and0000:O)| NONE(equality)         | 1     |
+equality__and0001(equality__and0001:O)| NONE(equality)         | 1     |
+--------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 13.848ns
+   Maximum output required time after clock: 4.114ns
+   Maximum combinational path delay: 13.677ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset'
+  Total number of paths / destination ports: 3120 / 2
+-------------------------------------------------------------------------
+Offset:              13.848ns (Levels of Logic = 12)
+  Source:            in1<1> (PAD)
+  Destination:       balance (LATCH)
+  Destination Clock: reset falling
+
+  Data Path: in1<1> to balance
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            27   1.106   1.224  in1_1_IBUF (in1_1_IBUF)
+     LUT4:I0->O            1   0.612   0.387  ins_max/out_cmp_gt00001 (ins_max/out_cmp_gt00001)
+     LUT3:I2->O            1   0.612   0.357  ins_max/out_cmp_gt0000262_SW0_SW0 (N59)
+     MUXF5:S->O           11   0.641   0.862  ins_max/out_cmp_gt0000262_f5 (ins_max/out_cmp_gt0000)
+     LUT4:I1->O           30   0.612   1.224  _old_out_2<6>11 (N4)
+     LUT4:I0->O            1   0.612   0.000  _old_out_2<7>1 (_old_out_2<7>1)
+     MUXF5:I1->O           2   0.278   0.410  _old_out_2<7>_f5 (_old_out_2<7>)
+     LUT3:I2->O            1   0.612   0.387  Mxor_old_balance_4_xor0000_xo<0>75 (Mxor_old_balance_4_xor0000_xo<0>75)
+     LUT4:I2->O            1   0.612   0.360  Mxor_old_balance_4_xor0000_xo<0>83_SW0 (N57)
+     LUT4:I3->O            1   0.612   0.387  Mxor_old_balance_4_xor0000_xo<0>83 (Mxor_old_balance_4_xor0000_xo<0>83)
+     LUT4:I2->O            2   0.612   0.449  Mxor_old_balance_4_xor0000_xo<0>105 (Mxor_old_balance_4_xor0000_xo<0>105)
+     LUT4:I1->O            2   0.612   0.000  balance__and00011 (balance__and0001)
+     LDCP:D                    0.268          balance
+    ----------------------------------------
+    Total                     13.848ns (7.801ns logic, 6.047ns route)
+                                       (56.3% logic, 43.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reset'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.114ns (Levels of Logic = 1)
+  Source:            balance (LATCH)
+  Destination:       balance (PAD)
+  Source Clock:      reset falling
+
+  Data Path: balance to balance
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             1   0.588   0.357  balance (balance_OBUF)
+     OBUF:I->O                 3.169          balance_OBUF (balance)
+    ----------------------------------------
+    Total                      4.114ns (3.757ns logic, 0.357ns route)
+                                       (91.3% logic, 8.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3378 / 32
+-------------------------------------------------------------------------
+Delay:               13.677ns (Levels of Logic = 10)
+  Source:            in1<0> (PAD)
+  Destination:       out<3> (PAD)
+
+  Data Path: in1<0> to out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            26   1.106   1.223  in1_0_IBUF (in1_0_IBUF)
+     LUT4:I0->O            1   0.612   0.000  ins_one/Madd_out_addsub0004_Madd_lut<0>11 (ins_one/Madd_out_addsub0004_Madd_lut<0>1)
+     MUXF5:I1->O           2   0.278   0.532  ins_one/Madd_out_addsub0004_Madd_lut<0>1_f5 (ins_one/Madd_out_addsub0004_Madd_lut<0>)
+     LUT3:I0->O            2   0.612   0.532  ins_one/Madd_out_addsub0005_lut<0>1 (ins_one/Madd_out_addsub0005_lut<0>)
+     LUT4:I0->O            2   0.612   0.532  ins_one/Madd_out_addsub0007_cy<0>11 (ins_one/Madd_out_addsub0007_cy<0>)
+     LUT4:I0->O            4   0.612   0.651  ins_one/Madd_out_addsub0007_cy<1>11 (ins_one/Madd_out_addsub0007_cy<1>)
+     LUT3:I0->O            1   0.612   0.387  _old_out_2<3>129 (_old_out_2<3>129)
+     LUT4:I2->O            3   0.612   0.603  _old_out_2<3>147 (_old_out_2<3>)
+     LUT2:I0->O            2   0.612   0.380  out<3>1 (out_3_OBUF)
+     OBUF:I->O                 3.169          out_3_OBUF (out<3>)
+    ----------------------------------------
+    Total                     13.677ns (8.837ns logic, 4.840ns route)
+                                       (64.6% logic, 35.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.44 secs
+ 
+--> 
+
+Total memory usage is 312568 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   50 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
